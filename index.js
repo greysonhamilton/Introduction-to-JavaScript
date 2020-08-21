@@ -9,8 +9,8 @@ if (votingAge => 18)
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 var x = 23;
-var y = x++; 
-
+var y = ++x; 
+console.log(y);
 
 
 
@@ -21,15 +21,19 @@ var y = x++;
 
 
 //Task d: Write a function to multiply a*b 
-function alebra (a,b);
-{a*b};
+function alebra(a,b)
+{console.log(a*b);}
+alebra();
 
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-let 
+let age = 40;
+function doggone()
+{console.log(age*7)};
+doggone();
 
 
 
