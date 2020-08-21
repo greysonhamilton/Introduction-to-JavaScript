@@ -1,6 +1,6 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
-var votingAge = 40;
+const votingAge = 40;
 if (votingAge => 18)
     {
         console.log("True")
@@ -8,21 +8,21 @@ if (votingAge => 18)
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-var x = 23;
-var y = ++x; 
-console.log(y);
+let y=10;
+let x=23;
+if (x>y) {console.log(x-y)};
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
-
+Number("1999");
 
 
 
 
 //Task d: Write a function to multiply a*b 
 function alebra(a,b)
-{console.log(a*b);}
+{console.log(a*b)};
 alebra();
 
 
