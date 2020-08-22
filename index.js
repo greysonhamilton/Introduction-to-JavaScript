@@ -128,23 +128,20 @@ console.log(cm + " cm");
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-let text = ""
-let bottles = 99;
-do {
-    text += bottles + " bottles of soda on the wall, " + bottles + " bottles of soda, take one down pass it around " + bottles + " bottles of soda on the wall.";
-    --bottles;
-} while (bottles > 97);
-console.log(bottles + " bottles of soda on the wall, " + bottles + " bottles of soda, take one down pass it around " + bottles + " bottles of soda on the wall.");
-
-function beerSong(repeat) {
-    for (let bottles = 0; bottles < repeat; bottles--){
-      if (bottles > 0) {
-        return bottles + " of soda on the wall, " + bottles + " bottles of soda, take one down, pass it around " + bottles + " bottles of soda on the wall.";
-      } else {
-        return "...there's no more bottles of soda on the wall...";
-      }
+function beerSong(soda) {
+    for (let num = soda; num >= 0; num--){
+        let cont = " bottles";
+        if (num > 2) {
+            console.log(num + "bottles of soda on the wall, " + num +" bottles of soda, take one down, pass it around " + num +" bottles of soda on the wall.");
+        } else if (num === 2) {
+            console.log(num + "bottles of soda on the wall, " + num +" bottles of soda, take one down, pass it around " + num +" bottle of soda on the wall.");
+        } else if (num === 1) {
+        console.log(num + " bottle of soda on the wall, " + num + " bottles of soda, take one down, pass it around no more bottles of soda on the wall.");
+        } else if (num === 0) {
+        console.log("No more bottles of soda on the wall, no more bottles of soda. Go to the store and buy some more, 99 bottles of soda on the wall...");
+       }
     }
-  }
+}
   beerSong(99);
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
