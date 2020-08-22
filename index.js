@@ -56,22 +56,23 @@ doggone();
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
 function dogFeeder(dogAge, dogWeight) {
-    if (0.166 <= dogAge <= 0.333) {
-        dogFeeder = dogWeight * 0.1;
-    } else if (0.333 <= dogAge <= 0.583) {
-    dogFeeder = dogWeight * 0.05;
-    } else if (0.583 <= dogAge < 1) {
-        dogFeeder = dogWeight * 0.04;
+    if (0.166 <= dogAge && dogAge <= 0.333) {
+        return dogWeight * 0.1;
+    } else if (0.333 <= dogAge && dogAge <= 0.583) {
+        return dogWeight * 0.05;
+    } else if (0.583 <= dogAge && dogAge < 1) {
+        return dogWeight * 0.04;
     } else if (dogAge >= 1 && dogWeight <= 5) {
-        dogFeeder = dogWeight * 0.05;
-    } else if (dogAge >= 1 && 6 <= dogWeight <= 10) {
-        dogFeeder = dogWeight * 0.04;
-    } else if (dogAge >= 1 && 11 <= dogWeight <= 15) {
-        dogFeeder = dogWeight * 0.03;
+        return dogWeight * 0.05;
+    } else if (dogAge >= 1 && 6 <= dogWeight && dogWeight <= 10) {
+        return dogWeight * 0.04;
+    } else if (dogAge >= 1 && 11 <= dogWeight && dogWeight <= 15) {
+        return dogWeight * 0.03;
     } else if (dogAge >= 1 && dogWeight > 15) {
-        dogFeeder = dogWeight * 0.02;
+        return dogWeight * 0.02;
     }
-} dogFeeder(1,10);
+} console.log(dogFeeder(1,15));
+
 
 
 
@@ -100,7 +101,9 @@ function roshambo(a,b) {
         console.log("Scissors Wins!");
     } else (a===1 && b===2) 
         console.log("Scissors Wins!");
-    }
+    } roshambo();
+
+
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
