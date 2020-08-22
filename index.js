@@ -83,54 +83,58 @@ function dogFeeder(dogAge, dogWeight) {
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
-let a = Math.floor(Math.random()*3);
-let b = Math.floor(Math.random()*3);
-function roshambo(a,b) {
-//error here in a === "rock"
-    if (a === b) {
-    console.log("It's a tie!!");
-    } else if (a===0 && b===2) {
-        console.log("Rock Wins!");
-    } else if (a===2 && b===0) {
-        console.log("Rock Wins!");
-    } else if (a===0 && b===1) {
-        console.log("Paper Wins!");
-    } else if (a===1 && b===0) {
-        console.log("Paper Wins!");
-    } else if (a===2 && b===1) {
-        console.log("Scissors Wins!");
-    } else (a===1 && b===2) 
-        console.log("Scissors Wins!");
-    } roshambo();
+let user = "Rock";
+let comp = Math.floor(Math.random()*3);
+if (comp === 0) {
+    console.log("Rock");
+} if (comp === 1) {
+    console.log("Paper");
+} if (comp === 2) {
+    console.log("Scissors");
+}
+function roshambo(user) {
+     if (user === comp) {
+    return "It's a tie!!";
+    } else if (user==="Rock" && comp===2) {
+        return "You Win!";
+    } else if (user==="Scissors" && comp===0) {
+        return "You lose..";
+    } else if (user==="Rock" && comp===1) {
+        return "You lose..";
+    } else if (user==="Paper" && comp===0) {
+        return "You Win!";
+    } else if (user==="Scissors" && comp===1) {
+        return "You Win!";
+    } else if(user==="Paper" && comp===2) {
+    return "You lose..";
+    }
+ } console.log(roshambo("Rock"));
 
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-let k = 48;
-let m = k*0.621371;
+let km = 48;
+let m = k*0.621;
 console.log(m + " miles");
 
 
-
-
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  let f = 15;
-  let c = f*30.48;
-  console.log(c + " cm");
-
-
+  let ft = 15;
+  let cm = ft*30.48;
+  console.log(cm + " cm");
 
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-let num = 99;
-function beerSong(s) {
-    console.log(num + " bottles of soda on the wall, " + num + " bottles of soda, take one down pass it around " + num + " bottles of soda on the wall.")
-}
-
+let bottles = 99;
+do {
+    bottles + " bottles of soda on the wall, " + bottles + " bottles of soda, take one down pass it around " + bottles + " bottles of soda on the wall.";
+    --bottles;
+} while (bottles > 97);
+console.log(bottles + " bottles of soda on the wall, " + bottles + " bottles of soda, take one down pass it around " + bottles + " bottles of soda on the wall.");
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -141,7 +145,20 @@ function beerSong(s) {
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
+let mark = 94;
+function grade(mark) {
+    if (mark >= 90) {
+        return "You got an A!!";
+    } else if (mark < 90 && mark >= 80) {
+        return "You got a B!";
+    } else if (mark < 80 && mark >=70) {
+        return "You got a C.";
+    } else if (mark < 70 && mark >= 60) {
+        return "You got a D.";
+    } else {
+        return "You have a F."
+    }
+} console.log(grade(94));
 
   
   
@@ -158,7 +175,31 @@ function beerSong(s) {
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
+let user1 = prompt("Please pick Rock, Paper, or Scissors.");
+let comp1 = Math.floor(Math.random()*3);
+if (comp1 === 0) {
+    console.log("Rock");
+} if (comp1 === 1) {
+    console.log("Paper");
+} if (comp1 === 2) {
+    console.log("Scissors");
+}
+function roshambo(user) {
+     if (user1 === comp) {
+    return "It's a tie!!";
+    } else if (user1==="Rock" && comp1===2) {
+        return "You Win!";
+    } else if (user1==="Scissors" && comp1===0) {
+        return "You lose..";
+    } else if (user1==="Rock" && comp1===1) {
+        return "You lose..";
+    } else if (user1==="Paper" && comp1===0) {
+        return "You Win!";
+    } else if (user1==="Scissors" && comp1===1) {
+        return "You Win!";
+    } else (user1==="Paper" && comp1===2)
+    return "You lose..";
+ } roshambo("Rock");
 
 
 
