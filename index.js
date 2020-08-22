@@ -10,7 +10,9 @@ if (votingAge => 18)
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 let y=10;
 let x=23;
-if (x>y) {console.log(x-y)};
+if (x>y) {
+    console.log(x-y)
+};
 
 
 
@@ -85,16 +87,15 @@ function dogFeeder(dogAge, dogWeight) {
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 let user = "Rock";
 let comp = Math.floor(Math.random()*3);
-if (comp === 0) {
-    console.log("Rock");
-} if (comp === 1) {
-    console.log("Paper");
-} if (comp === 2) {
-    console.log("Scissors");
-}
 function roshambo(user) {
-     if (user === comp) {
+     if (user==="Rock" && comp===0) {
     return "It's a tie!!";
+    } else if (user==="Rock" && comp===0) {
+        return "It's a tie!!";
+    } else if (user==="Scissors" && comp===1) {
+        return "It's a tie!!";
+    } else if (user==="Paper" && comp===2) {
+        return "It's a tie!!";
     } else if (user==="Rock" && comp===2) {
         return "You Win!";
     } else if (user==="Scissors" && comp===0) {
@@ -120,9 +121,9 @@ console.log(m + " miles");
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  let ft = 15;
-  let cm = ft*30.48;
-  console.log(cm + " cm");
+let ft = 15;
+let cm = ft*30.48;
+console.log(cm + " cm");
 
 
 /************************************************************** Task 6 **************************************************************/
