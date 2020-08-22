@@ -136,7 +136,16 @@ do {
 } while (bottles > 97);
 console.log(bottles + " bottles of soda on the wall, " + bottles + " bottles of soda, take one down pass it around " + bottles + " bottles of soda on the wall.");
 
-
+function beerSong(repeat) {
+    for (let bottles = 0; bottles < repeat; bottles--){
+      if (bottles > 0) {
+        return bottles + " of soda on the wall, " + bottles + " bottles of soda, take one down, pass it around " + bottles + " bottles of soda on the wall.";
+      } else {
+        return "...there's no more bottles of soda on the wall...";
+      }
+    }
+  }
+  beerSong(99);
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
@@ -175,10 +184,10 @@ function grade(mark) {
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-let user1 = "Rock";
-let comp1 = Math.floor(Math.random()*3);
 function roshambo(user) {
-     if (user1==="Rock" && comp1===0) {
+let user1 = prompt("Please choose Rock, Paper, or Scissors.", "Rock");
+let comp1 = Math.floor(Math.random()*3);
+    {if (user1==="Rock" && comp1===0) {
     return "It's a tie!!";
     } else if (user1==="Rock" && comp1===0) {
         return "It's a tie!!";
@@ -200,3 +209,4 @@ function roshambo(user) {
     return "You lose..";
     }
  } console.log(roshambo("Rock"));
+}
