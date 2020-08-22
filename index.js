@@ -25,7 +25,7 @@ Number("1999");
 //Task d: Write a function to multiply a*b 
 function alebra(a,b)
 {console.log(a*b)};
-alebra();
+alebra(6,8);
 
 
 
@@ -90,8 +90,6 @@ let comp = Math.floor(Math.random()*3);
 function roshambo(user) {
      if (user==="Rock" && comp===0) {
     return "It's a tie!!";
-    } else if (user==="Rock" && comp===0) {
-        return "It's a tie!!";
     } else if (user==="Scissors" && comp===1) {
         return "It's a tie!!";
     } else if (user==="Paper" && comp===2) {
@@ -130,9 +128,10 @@ console.log(cm + " cm");
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
+let text = ""
 let bottles = 99;
 do {
-    bottles + " bottles of soda on the wall, " + bottles + " bottles of soda, take one down pass it around " + bottles + " bottles of soda on the wall.";
+    text += bottles + " bottles of soda on the wall, " + bottles + " bottles of soda, take one down pass it around " + bottles + " bottles of soda on the wall.";
     --bottles;
 } while (bottles > 97);
 console.log(bottles + " bottles of soda on the wall, " + bottles + " bottles of soda, take one down pass it around " + bottles + " bottles of soda on the wall.");
@@ -176,18 +175,17 @@ function grade(mark) {
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-let user1 = prompt("Please pick Rock, Paper, or Scissors.");
+let user1 = "Rock";
 let comp1 = Math.floor(Math.random()*3);
-if (comp1 === 0) {
-    console.log("Rock");
-} if (comp1 === 1) {
-    console.log("Paper");
-} if (comp1 === 2) {
-    console.log("Scissors");
-}
 function roshambo(user) {
-     if (user1 === comp) {
+     if (user1==="Rock" && comp1===0) {
     return "It's a tie!!";
+    } else if (user1==="Rock" && comp1===0) {
+        return "It's a tie!!";
+    } else if (user1==="Scissors" && comp1===1) {
+        return "It's a tie!!";
+    } else if (user1==="Paper" && comp1===2) {
+        return "It's a tie!!";
     } else if (user1==="Rock" && comp1===2) {
         return "You Win!";
     } else if (user1==="Scissors" && comp1===0) {
@@ -198,10 +196,7 @@ function roshambo(user) {
         return "You Win!";
     } else if (user1==="Scissors" && comp1===1) {
         return "You Win!";
-    } else (user1==="Paper" && comp1===2)
+    } else if(user1==="Paper" && comp1===2) {
     return "You lose..";
- } roshambo("Rock");
-
-
-
-
+    }
+ } console.log(roshambo("Rock"));
