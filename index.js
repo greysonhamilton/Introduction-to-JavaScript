@@ -87,7 +87,7 @@ function dogFeeder(dogAge, dogWeight) {
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 let user = "Rock";
 let comp = Math.floor(Math.random()*3);
-function roshambo(user) {
+function roshambo(user, comp) {
      if (user==="Rock" && comp===0) {
     return "It's a tie!!";
     } else if (user==="Scissors" && comp===1) {
@@ -107,7 +107,7 @@ function roshambo(user) {
     } else if(user==="Paper" && comp===2) {
     return "You lose..";
     }
- } console.log(roshambo("Rock"));
+ } console.log(roshambo(user,comp));
 
 
 /************************************************************** Task 5 **************************************************************/
@@ -141,7 +141,7 @@ function annoyingSong(soda) {
        }
     }
 }
-  beerSong(99);
+  annoyingSong(99);
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
@@ -180,29 +180,28 @@ function grade(mark) {
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-function roshambo(user) {
-    let user1 = prompt("Please choose Rock, Paper, or Scissors.", "Rock");
-    let comp1 = Math.floor(Math.random()*3);
-        {if (user1==="Rock" && comp1===0) {
+let user1 = prompt("Please choose Rock, Paper, or Scissors.", "Rock");
+let comp1 = Math.floor(Math.random()*3);
+function roshambo(user1,comp1) {
+    if (user1=="Rock" && comp1===0) {
+    return "It's a tie!!";
+    } else if (user1=="Rock" && comp1===0) {
         return "It's a tie!!";
-        } else if (user1==="Rock" && comp1===0) {
-            return "It's a tie!!";
-        } else if (user1==="Scissors" && comp1===1) {
-            return "It's a tie!!";
-        } else if (user1==="Paper" && comp1===2) {
-            return "It's a tie!!";
-        } else if (user1==="Rock" && comp1===2) {
-            return "You Win!";
-        } else if (user1==="Scissors" && comp1===0) {
-            return "You lose..";
-        } else if (user1==="Rock" && comp1===1) {
-            return "You lose..";
-        } else if (user1==="Paper" && comp1===0) {
-            return "You Win!";
-        } else if (user1==="Scissors" && comp1===1) {
-            return "You Win!";
-        } else if(user1==="Paper" && comp1===2) {
+    } else if (user1=="Scissors" && comp1===1) {
+        return "It's a tie!!";
+    } else if (user1=="Paper" && comp1===2) {
+        return "It's a tie!!";
+    } else if (user1=="Rock" && comp1===2) {
+        return "You Win!";
+    } else if (user1=="Scissors" && comp1===0) {
         return "You lose..";
-        }
-     } console.log(roshambo("Rock"));
+    } else if (user1=="Rock" && comp1===1) {
+        return "You lose..";
+    } else if (user1=="Paper" && comp1===0) {
+        return "You Win!";
+    } else if (user1=="Scissors" && comp1===1) {
+        return "You Win!";
+    } else if(user1=="Paper" && comp1===2) {
+    return "You lose..";
     }
+ } console.log(roshambo(user1,comp1));
