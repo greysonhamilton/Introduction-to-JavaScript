@@ -180,7 +180,7 @@ function grade(mark) {
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-let user1 = prompt("Please choose Rock, Paper, or Scissors.", "Rock");
+let user1 = prompt("Ready for a game of roshambo? Please choose Rock, Paper, or Scissors.");
 let comp1 = Math.floor(Math.random()*3);
 function roshambo(user1,comp1) {
     if (user1=="Rock" && comp1===0) {
