@@ -114,7 +114,7 @@ function roshambo(user) {
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 let km = 48;
-let m = k*0.621;
+let m = km*0.621;
 console.log(m + " miles");
 
 
@@ -128,7 +128,7 @@ console.log(cm + " cm");
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-function beerSong(soda) {
+function annoyingSong(soda) {
     for (let num = soda; num >= 0; num--){
         if (num > 2) {
             console.log(num + " bottles of soda on the wall, " + num + " bottles of soda, take one down, pass it around " + (num-1) + " bottles of soda on the wall.");
@@ -181,28 +181,28 @@ function grade(mark) {
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 function roshambo(user) {
-let user1 = prompt("Please choose Rock, Paper, or Scissors.", "Rock");
-let comp1 = Math.floor(Math.random()*3);
-    {if (user1==="Rock" && comp1===0) {
-    return "It's a tie!!";
-    } else if (user1==="Rock" && comp1===0) {
+    let user1 = prompt("Please choose Rock, Paper, or Scissors.", "Rock");
+    let comp1 = Math.floor(Math.random()*3);
+        {if (user1==="Rock" && comp1===0) {
         return "It's a tie!!";
-    } else if (user1==="Scissors" && comp1===1) {
-        return "It's a tie!!";
-    } else if (user1==="Paper" && comp1===2) {
-        return "It's a tie!!";
-    } else if (user1==="Rock" && comp1===2) {
-        return "You Win!";
-    } else if (user1==="Scissors" && comp1===0) {
+        } else if (user1==="Rock" && comp1===0) {
+            return "It's a tie!!";
+        } else if (user1==="Scissors" && comp1===1) {
+            return "It's a tie!!";
+        } else if (user1==="Paper" && comp1===2) {
+            return "It's a tie!!";
+        } else if (user1==="Rock" && comp1===2) {
+            return "You Win!";
+        } else if (user1==="Scissors" && comp1===0) {
+            return "You lose..";
+        } else if (user1==="Rock" && comp1===1) {
+            return "You lose..";
+        } else if (user1==="Paper" && comp1===0) {
+            return "You Win!";
+        } else if (user1==="Scissors" && comp1===1) {
+            return "You Win!";
+        } else if(user1==="Paper" && comp1===2) {
         return "You lose..";
-    } else if (user1==="Rock" && comp1===1) {
-        return "You lose..";
-    } else if (user1==="Paper" && comp1===0) {
-        return "You Win!";
-    } else if (user1==="Scissors" && comp1===1) {
-        return "You Win!";
-    } else if(user1==="Paper" && comp1===2) {
-    return "You lose..";
+        }
+     } console.log(roshambo("Rock"));
     }
- } console.log(roshambo("Rock"));
-}
